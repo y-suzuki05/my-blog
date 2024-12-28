@@ -15,8 +15,8 @@ if (!process.env.API_KEY) {
 }
 
 export const client = createClient({
-    serviceDomain: process.env.SERVICE_DOMAIN,
-    apiKey: process.env.API_KEY,
+    serviceDomain: process.env.SERVICE_DOMAIN || '',
+    apiKey: process.env.API_KEY || '',
 });
 
 // ブログ一覧を取得
