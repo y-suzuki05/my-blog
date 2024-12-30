@@ -16,7 +16,7 @@ export const PostCard = ({ post }: Props) => {
           {post.title}
         </h3>
         <p className="font-normal text-gray-700 text-right text-sm">
-          作成日：{formatDate(post.createdAt)}
+          公開日：{formatDate(post.publishedAt)}
         </p>
       </a>
     </li>
