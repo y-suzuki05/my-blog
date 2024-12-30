@@ -1,4 +1,5 @@
-import { getPosts } from "@/libs/client";
+import { getPosts } from "@/libs/getPosts";
+import { Top } from "@/app/(top)/components/Top";
 
 export default async function Home() {
   const { posts } = await getPosts();
@@ -7,20 +8,5 @@ export default async function Home() {
     return <div>Loading...</div>;
   }
 
-  return (
-    <div>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>
-            {post.title}
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `${post.body}`,
-              }}
-            />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  return <Top posts={posts} />;
 }

@@ -1,4 +1,5 @@
-import { getDetail, getPosts } from "@/libs/client";
+import { getPosts } from "@/libs/getPosts";
+import { getPostDetail } from "@/libs/getPostDetail";
 
 export async function generateStaticParams(): Promise<{ postId: string }[]> {
   const { posts } = await getPosts();
@@ -15,7 +16,7 @@ type Props = {
 };
 
 export default async function Page({ params }: Props) {
-  const post = await getDetail((await params).postId);
+  const post = await getPostDetail((await params).postId);
   return (
     <>
       <div>{post.title}</div>
