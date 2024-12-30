@@ -1,7 +1,5 @@
+import { Profile } from "@/app/profile/components/Profile";
+
 export default function Page() {
-  return (
-    <div>
-      <h1>プロフィール</h1>
-    </div>
-  );
+  return <Profile />;
 }
