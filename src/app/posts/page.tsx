@@ -1,7 +1,12 @@
-export default function Page() {
-  return (
-    <div>
-      <h1>記事一覧</h1>
-    </div>
-  );
+import { Posts } from "@/app/posts/components/Posts";
+import { getPosts } from "@/libs/getPosts";
+
+export default async function Page() {
+  const { posts } = await getPosts();
+
+  if (!posts) {
+    return <div>Loading...</div>;
+  }
+
+  return <Posts posts={posts} />;
 }
