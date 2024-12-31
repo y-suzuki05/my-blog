@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "szyk-tech-blog",
-  description: "技術ブログです。",
+  description: "プログラミングやチーム開発に関する学びを共有するブログです。",
 };
 
 export default function RootLayout({
