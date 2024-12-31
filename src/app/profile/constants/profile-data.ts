@@ -5,10 +5,6 @@ export const profileData = {
       url: "https://x.com/Suzuki99794927",
     },
     {
-      name: "Qiita",
-      url: "https://qiita.com/y-suzu",
-    },
-    {
       name: "GitHub",
       url: "https://github.com/y-suzuki05",
     },
